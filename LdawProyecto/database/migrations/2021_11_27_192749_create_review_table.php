@@ -19,7 +19,7 @@ class CreateReviewTable extends Migration
             $table -> foreignID('id_libro');
             $table -> string('Comentario');
             $table -> string('Favorito');
-            $table -> string('Calificacion');
+            $table -> integer('Calificacion');
             $table -> timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateReviewTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_review');
+        Schema::dropIfExists('review');
     }
 }

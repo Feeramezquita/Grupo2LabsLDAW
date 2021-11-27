@@ -17,7 +17,7 @@ class CreateLibroTable extends Migration
             $table->id('id_libro');
             $table-> string('Titulo');
             $table-> string('Autor');
-            $table-> string('AñoPublicacion');
+            $table-> string('AnoPublicacion');
             $table-> string('Paginas');
             $table-> string('Editorial');
             $table-> string('LugarPublicacion');
@@ -33,6 +33,6 @@ class CreateLibroTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_libro');
+        Schema::dropIfExists('libro');
     }
 }
