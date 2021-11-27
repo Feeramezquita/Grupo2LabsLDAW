@@ -16,3 +16,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/usuario/libros', function () {
+    return view('usuario.libros');
+});
+
+Route::get('/usuario/crearLibro', function () {
+    return view('usuario.crear_libro');
+});
+
+Route::get('/usuario/editarLibro', function () {
+    return view('usuario.editar_libro');
+});
+
+Route::get('/usuario/reviewLibros', function () {
+    return view('usuario.review_libros');
+});
+Route::get('/usuario/crearReviewLibro', function () {
+    return view('usuario.crear_review_libro');
+});
