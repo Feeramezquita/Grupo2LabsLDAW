@@ -10,15 +10,15 @@ class Libro extends Model
     use HasFactory;
     protected $table = 'libro';
     protected $primaryKey = 'id_libro';
-    protected $fillable = [
-        'id_libro',
-        'Titulo',
-        'Autor',
-        'AnoPublicacion',
-        'Paginas',
-        'Editorial',
-        'LugarPublicacion'
-    ];
+    // protected $fillable = [
+    //     'id_libro',
+    //     'Titulo',
+    //     'Autor',
+    //     'AnoPublicacion',
+    //     'Paginas',
+    //     'Editorial',
+    //     'LugarPublicacion'
+    // ];
     public $timestamps = false;
 
 }
