@@ -2,9 +2,14 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Nombre de Usuario</th>
-      <th scope="col">Comentario</th>
-      <th scope="col">Calificación</th>
+      <th scope="col">ID</th>
+      <th scope="col">Titulo del libro</th>
+      <th scope="col">Autor del libro</th>
+      <th scope="col">Año de publicacion</th>
+      <th scope="col">No. Paginas</th>
+      <th scope="col">Editorial</th>
+      <th scope="col">Lugar de publicacion</th>
+      <th scope="col">Genéro</th>
     </tr>
   </thead>
   <tbody>
@@ -12,11 +17,11 @@
       <td>Mark</td>
       <td>cool</td>
       <td>5</td>
-    </tr>
-    <tr>
-      <td>Jacob</td>
-      <td>estuvo X</td>
-      <td>4</td>
+      <td>Mark</td>
+      <td>cool</td>
+      <td>5</td>
+      <td>cool</td>
+      <td>5</td>
     </tr>
   </tbody>
 </table>
