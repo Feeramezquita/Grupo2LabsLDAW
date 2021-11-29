@@ -39,3 +39,7 @@ Route::resource('administrador', AdministradorController::class);
 //     return view('usuario.crear_review_libro');
 // });
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

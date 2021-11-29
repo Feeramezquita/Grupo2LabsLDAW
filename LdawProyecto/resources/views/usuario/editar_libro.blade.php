@@ -1,5 +1,7 @@
 <!-- Formulario para editar un libros  -->
-
+@extends('layouts.app')
+@section('content')
+<div class="container">
 <h1>Editar Libro</h1>
 
 <form action="{{ url('/usuario/'.$libro->id_libro)}}" method="post" enctype="multipart/form-data">
@@ -7,3 +9,5 @@
     {{ method_field('PATCH') }}
     @include('usuario.form')
 </form>
+</div >
+@endsection
