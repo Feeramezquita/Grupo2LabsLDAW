@@ -28,6 +28,9 @@
       <td>
         <a href="{{ url('/usuario/'.$libro->id_libro.'/edit') }}">Editar</a>
       </td>
+      <td>
+      <a href="{{ url('/review/'.$libro->id_libro.'/edit') }}">Review</a>
+      </td>
     </tr>
     @endforeach
   </tbody>

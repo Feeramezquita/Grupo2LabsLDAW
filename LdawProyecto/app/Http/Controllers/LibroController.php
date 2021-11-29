@@ -10,6 +10,7 @@ class LibroController extends Controller
     {
         $datos['libros']= Libro::paginate(7);
         return view('usuario.libros', $datos);
+
     }
 
 
@@ -23,6 +24,8 @@ class LibroController extends Controller
     {
         $libro=Libro::findOrFail($id_libro);
         return view('usuario.editar_libro', compact('libro'));
+        // return response()->json($libro); 
+
     }
 
 

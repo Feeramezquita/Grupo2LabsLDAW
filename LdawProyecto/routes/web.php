@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibroController;
+use App\Http\Controllers\ReviewController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +29,7 @@ Route::get('/', function () {
 
 // Con esta ruta las views dentro de "usuario" pueden accedes a todos los metodos dentro de UserController
 Route::resource('usuario', LibroController::class); 
+Route::resource('review', ReviewController::class); 
 
 // Route::get('/usuario/reviewLibros', function () {
 //     return view('usuario.review_libros');
