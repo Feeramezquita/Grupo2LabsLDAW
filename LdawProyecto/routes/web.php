@@ -31,6 +31,7 @@ Route::get('/', function () {
 Route::resource('usuario', LibroController::class); 
 Route::resource('review', ReviewController::class); 
 
+Route::resource('administrador', AdministradorController::class); 
 // Route::get('/usuario/reviewLibros', function () {
 //     return view('usuario.review_libros');
 // });
