@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\LibroController;
+use App\Http\Controllers\ReviewController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,14 +20,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/usuario/libros', function () {
-    return view('usuario.libros');
-});
+// Route::get('/usuario/libros', function () {
+//     return view('usuario.libros');
+// });
 
-Route::get('/usuario/crearLibro', [UserController::class, 'create']);
-Route::get('/usuario/editarLibro', [UserController::class, 'edit']);
+//Route::get('/usuario/createLibro', [LibroController::class, 'store']);
+// Route::get('/usuario/editarLibro', [UserController::class, 'edit']);
 
-
+// Con esta ruta las views dentro de "usuario" pueden accedes a todos los metodos dentro de UserController
+Route::resource('usuario', LibroController::class); 
+Route::resource('review', ReviewController::class); 
 
 // Route::get('/usuario/reviewLibros', function () {
 //     return view('usuario.review_libros');
@@ -33,3 +37,4 @@ Route::get('/usuario/editarLibro', [UserController::class, 'edit']);
 // Route::get('/usuario/crearReviewLibro', function () {
 //     return view('usuario.crear_review_libro');
 // });
+

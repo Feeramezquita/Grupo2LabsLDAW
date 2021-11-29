@@ -24,7 +24,7 @@ class LibrosSeeder extends Seeder
                 "Paginas" => "250",
                 "Editorial" => "Taurus",
                 "LugarPublicacion" => "USA",
-                "id_genero" => 2,
+                "Genero" => "Drama",
             ]
         ]);
     }

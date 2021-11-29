@@ -21,7 +21,7 @@ class CreateLibroTable extends Migration
             $table-> string('Paginas');
             $table-> string('Editorial');
             $table-> string('LugarPublicacion');
-            $table-> foreignID('id_genero');
+            $table-> string('Genero');
             $table->timestamps();
         });
     }
