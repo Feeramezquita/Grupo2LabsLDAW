@@ -8,8 +8,8 @@ class AdministradorController extends Controller
 {
     public function index()
     {
-    $datos['usuarios']= Administrador::paginate(4);
-    return view('administrador.usuarios', $datos);
+        $datos['usuarios']= Usuario::paginate(7);
+        return view('administrador.usuarios', $datos);
 
     }
 
@@ -22,7 +22,7 @@ class AdministradorController extends Controller
 
     public function edit($id_user)
     {
-        $usuario=Administrador::findOrFail($id_user);
+        $usuario=Usuario::findOrFail($id_user);
         return view('administrador.editar_usuario', compact('usuario'));
         // return response()->json($libro); 
 
@@ -32,24 +32,20 @@ class AdministradorController extends Controller
     public function store(Request $request)
     {
         $libro = request()->except('_token', 'enviar');
-        Administrador::insert($libro);
+        Libro::insert($libro);
 
         //  return response()->json($libro); 
-        $datos['usuarios']= Administrador::paginate(7);
+        $datos['libros']= Libro::paginate(7);
         return view('administrador.usuarios', $datos);
     }
 
 
     public function update(Request $request, $id) {
         $libro = request()->except(['_token', 'enviar','_method']);
-        Administrador::where('id_user','=',$id)->update($libro);
-        $datos['usuarios']= Administrador::paginate(7);
+        Usuario::where('id_user','=',$id)->update($libro);
+        $datos['libros']= Usuario::paginate(7);
         return view('administrador.usuarios', $datos);
 
     }
-    public function destroy($id){
-        $user=Administrador::FindOrFail($id);
-        $user->delete();
-
-    }
 }
+

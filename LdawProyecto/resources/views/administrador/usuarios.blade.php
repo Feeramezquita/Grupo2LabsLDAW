@@ -21,6 +21,9 @@
         <a href="{{ url('/administrador/'.$usuario->id_user.'/edit') }}">Editar</a>
       </td>
       <td>
+        <a href="{{ url('/administrador/'.$usuario->id_user) }}">Eliminar</a>
+      </td>
+        
     </tr>
     @endforeach
   </tbody>

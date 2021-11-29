@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Usuario extends Model
+class Administrador extends Model
 {
     use HasFactory;
     protected $table = 'users';
@@ -20,5 +20,4 @@ class Usuario extends Model
     //     'LugarPublicacion'
     // ];
     public $timestamps = false;
-
 }
