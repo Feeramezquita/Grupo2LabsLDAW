@@ -48,8 +48,8 @@ class AdministradorController extends Controller
 
     }
     public function destroy($id){
-        $user=Administrador::FindOrFail($id);
-        $user->delete();
+        Administrador::destroy($id);
+        return redirect('administrador');
 
     }
 }

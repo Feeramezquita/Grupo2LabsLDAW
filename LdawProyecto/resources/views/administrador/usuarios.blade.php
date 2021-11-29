@@ -21,7 +21,12 @@
         <a href="{{ url('/administrador/'.$usuario->id_user.'/edit') }}">Editar</a>
       </td>
       <td>
-        <a href="{{ url('/administrador/'.$usuario->id_user) }}">Eliminar</a>
+        <form action="{{ url('/administrador/'.$usuario->id_user) }}" method="post">
+        <!--<a href="{{ url('/administrador/'.$usuario->id_user) }}">Eliminar</a>-->
+        @csrf 
+          {{method_field('DELETE')}}
+          <input type="submit" value="Borrar">
+        </form>
       </td>
         
     </tr>
