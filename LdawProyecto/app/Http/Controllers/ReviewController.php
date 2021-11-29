@@ -37,12 +37,19 @@ class ReviewController extends Controller
 
     public function store(Request $request)
     {
-        //        
+        
+
+        
     }
 
 
-    public function update(Request $request)
+    public function update(Request $request,$id)
     {
-        // 
+        $libro = request()->except('_token','_method');
+        // // Review::insert($libro);
+        Libro::where('id_libro','=',$id)->update($libro);
+        // // Review::select($libro);
+        return response()->json($libro);
+        // return view('review.review', compact('libro'));
     }
 }

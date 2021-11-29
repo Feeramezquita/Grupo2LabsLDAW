@@ -45,6 +45,7 @@ class LibroController extends Controller
         Libro::where('id_libro','=',$id)->update($libro);
         $datos['libros']= Libro::paginate(7);
         return view('usuario.libros', $datos);
+        // return response()->json($libro); 
 
     }
 }
