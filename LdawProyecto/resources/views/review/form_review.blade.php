@@ -12,6 +12,13 @@
             <td>{{$review->name}}</td>
             <td>{{$review->Comentario}}</td>
             <td>{{$review->Calificacion}}</td>
+            <td>
+                <form action="{{ url('/review/'.$review->id_review) }}" method="post">
+                    @csrf
+                    {{method_field('DELETE')}}
+                    <input type="submit" value="Borrar">
+                </form>
+            </td>
         </tr>
         @endforeach
 

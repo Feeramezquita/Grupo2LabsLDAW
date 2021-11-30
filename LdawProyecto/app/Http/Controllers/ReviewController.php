@@ -66,11 +66,17 @@ class ReviewController extends Controller
 
     public function update(Request $request, $id)
     {
-        $libro = request()->except('_token', '_method');
-        // // Review::insert($libro);
-        Libro::where('id_libro', '=', $id)->update($libro);
-        // // Review::select($libro);
-        return response()->json($libro);
-        // return view('review.review', compact('libro'));
+        // $libro = request()->except('_token', '_method');
+        // // // Review::insert($libro);
+        // Libro::where('id_libro', '=', $id)->update($libro);
+        // // // Review::select($libro);
+        // return response()->json($libro);
+        // // return view('review.review', compact('libro'));
+    }
+    public function destroy(Request $request,$id_review){
+        Review::destroy($id_review);
+        return redirect('usuario');
+        // return response()->json($id);
+
     }
 }
