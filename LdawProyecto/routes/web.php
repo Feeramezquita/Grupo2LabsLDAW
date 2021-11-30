@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LibroController;
 use App\Http\Controllers\ReviewController;
-
+use App\Http\Controllers\AdministradorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +28,11 @@ Route::resource('review', ReviewController::class);
 
 //{{ url('/review/create/'.$libro->id_libro) }}"
 
+Route::resource('administrador', AdministradorController::class); 
+// Route::get('/usuario/reviewLibros', function () {
+//     return view('usuario.review_libros');
+// });
+// Route::get('/usuario/crearReviewLibro', function () {
+//     return view('usuario.crear_review_libro');
+// });
 
