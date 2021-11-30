@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
 
@@ -17,22 +17,19 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            [
-                "id_user" => 1,
-                "name" => "Fer",
-                "password" => Hash::make("AdminPasswordSecure123"),
-            ],
-            [
-                "id_user" => 2,
-                "name" => "Adrian",
-                "password" => Hash::make("AdminPasswordSecure12324"),
-            ],
-            [
-                "id_user" => 3,
-                "name" => "Rodrigo",
-                "password" => Hash::make("AdminPasswordSecure12farqw3"),
-            ]
+        $useradmin = User::create([
+            "name" => "Fer",
+            "email" => "fer@tec.mx",
+            "password" => Hash::make("contrasena"),
+            "fullaccess" => 'yes',
+            "codigo" => 'adm1'
+        ]);
+        $user1 = User::create([
+            "name" => "Adrian",
+            "email" => "Adrian@tec.mx",
+            "password" => Hash::make("password"),
+            "fullaccess" => 'no',
+            "codigo" => 'casa1'
         ]);
     }
 }
