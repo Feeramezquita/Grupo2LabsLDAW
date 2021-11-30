@@ -1,5 +1,3 @@
-<a href="{{ url('/review/create')}}">Añadir Review</a>
-<a href="{{ url('/usuario/')}}">Regresar</a>
 <table class="table">
     <thead>
         <tr>
@@ -14,8 +12,17 @@
             <td>{{$review->name}}</td>
             <td>{{$review->Comentario}}</td>
             <td>{{$review->Calificacion}}</td>
+            <td>
+                <form action="{{ url('/review/'.$review->id_review) }}" method="post">
+                    @csrf
+                    {{method_field('DELETE')}}
+                    <input type="submit" value="Borrar">
+                </form>
+            </td>
         </tr>
         @endforeach
 
     </tbody>
 </table>
+<br><br>
+<a href="{{ url('/usuario/')}}">Regresar</a>

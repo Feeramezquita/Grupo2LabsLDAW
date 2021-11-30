@@ -1,23 +1,40 @@
 <label for="Titulo">Titulo del libro</label>
-<input type="text" name="Titulo" value="{{ isset($libro->Titulo)?$libro->Titulo:'' }}" id="">
+<br>
+<input type="text" name="Titulo" required value="{{ isset($libro->Titulo)?$libro->Titulo:'' }}" id="">
+<br>
 <br>
 <label for="Autor">Autor del libro</label>
-<input type="text" name="Autor" value="{{ isset($libro->Autor)?$libro->Autor:'' }}" id="">
+<br>
+<input type="text" name="Autor"  required value="{{ isset($libro->Autor)?$libro->Autor:'' }}" id="">
+<br>
 <br>
 <label for="AnoPublicacion">Año de publicacion</label>
-<input type="number" name="AnoPublicacion" value="{{ isset($libro->AnoPublicacion)?$libro->AnoPublicacion:'' }}"id="">
+<br>
+<input type="number" name="AnoPublicacion" required value="{{ isset($libro->AnoPublicacion)?$libro->AnoPublicacion:'' }}"id="">
+<br>
 <br>
 <label for="Paginas">No. Paginas</label>
-<input type="number" name="Paginas" value="{{isset($libro->Paginas)?$libro->Paginas:'' }}" id="">
+<br>
+<input type="number" name="Paginas" required value="{{isset($libro->Paginas)?$libro->Paginas:'' }}" id="">
+<br>
 <br>
 <label for="Editorial">Editorial</label>
-<input type="text" name="Editorial" value="{{isset($libro->Editorial)?$libro->Editorial:'' }}" id="">
+<br>
+<input type="text" name="Editorial" required value="{{isset($libro->Editorial)?$libro->Editorial:'' }}" id="">
+<br>
 <br>
 <label for="LugarPublicacion">Lugar de publicacion</label>
-<input type="text" name="LugarPublicacion" value="{{isset($libro->LugarPublicacion)?$libro->LugarPublicacion:'' }}" id="">
+<br>
+<input type="text" name="LugarPublicacion" required value="{{isset($libro->LugarPublicacion)?$libro->LugarPublicacion:'' }}" id="">
+<br>
 <br>
 <label for="Genero">Genero</label>
-<input type="text" name="Genero" value="{{ isset($libro->Genero)?$libro->Genero:'' }}"id="">
 <br>
-<input type="submit" value="Guardar">
+<input type="text" name="Genero" required value="{{ isset($libro->Genero)?$libro->Genero:'' }}"id="">
 <br>
+<br>
+<input type="submit" required value="Guardar">
+<br>
+<br>
+<br>
+<a href="{{ url('/usuario/')}}">Regresar</a>

@@ -22,8 +22,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/review/create/{id_libro}', [ReviewController::class, 'create']);
 
-// Con esta ruta las views dentro de "usuario" pueden accedes a todos los metodos dentro de UserController
+// Con esta ruta las views dentro de "usuario" pueden accedes a todos los metodos del Controller
 Route::resource('usuario', LibroController::class); 
 Route::resource('review', ReviewController::class); 
 Route::resource('administrador', AdministradorController::class); 
