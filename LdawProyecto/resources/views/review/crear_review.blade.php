@@ -9,7 +9,7 @@
     <input type="number" name="id_user" value="{{isset($libro->Editorial)?$libro->id_user:'' }}" id="">
     <br>
     <br>
-    <input type="hidden" name="id_libro" value="1" id="">
+    <input type="hidden" name="id_libro" value="{{$id}}" id="">
     <label for="Comentario">Comentario</label>
     <br>
     <textarea id="Comentario" name="Comentario" value="{{isset($libro->Editorial)?$libro->Comentario:'' }}" rows="4"></textarea>
@@ -22,5 +22,6 @@
     <br>
     <input type="submit" value="Añadir">
     <br>
-    <a href="{{ url('/usuario/')}}">Regresar</a>
+    <br>
 </form>
+<a href="{{ url('/usuario/')}}">Regresar</a>

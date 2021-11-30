@@ -20,21 +20,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/usuario/libros', function () {
-//     return view('usuario.libros');
-// });
+Route::get('/review/create/{id_libro}', [ReviewController::class, 'create']);
 
-//Route::get('/usuario/createLibro', [LibroController::class, 'store']);
-// Route::get('/usuario/editarLibro', [UserController::class, 'edit']);
-
-// Con esta ruta las views dentro de "usuario" pueden accedes a todos los metodos dentro de UserController
+// Con esta ruta las views dentro de "usuario" pueden accedes a todos los metodos del Controller
 Route::resource('usuario', LibroController::class); 
 Route::resource('review', ReviewController::class); 
 
-// Route::get('/usuario/reviewLibros', function () {
-//     return view('usuario.review_libros');
-// });
-// Route::get('/usuario/crearReviewLibro', function () {
-//     return view('usuario.crear_review_libro');
-// });
+//{{ url('/review/create/'.$libro->id_libro) }}"
+
 

@@ -1,5 +1,3 @@
-<a href="{{ url('/review/create')}}">Añadir Review</a>
-<a href="{{ url('/usuario/')}}">Regresar</a>
 <table class="table">
     <thead>
         <tr>
@@ -19,3 +17,5 @@
 
     </tbody>
 </table>
+<br><br>
+<a href="{{ url('/usuario/')}}">Regresar</a>

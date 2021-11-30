@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 
 class LibroController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $datos['libros']= Libro::paginate(7);
+        $nombre = $request->get('buscar');
+        // $datos['libros']= Libro::paginate(7);
+        $datos['libros']= Libro::where('Titulo','like', "%$nombre%")->paginate(7);
         return view('usuario.libros', $datos);
 
     }
